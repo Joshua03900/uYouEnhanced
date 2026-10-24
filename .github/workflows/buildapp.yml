@@ -157,7 +157,7 @@ jobs:
       - name: Prepare YouTube iPA
         id: prepare_youtube
         run: |
-          wget -S "$YOUTUBE_URL" -O main/YouTube.ipa
+          wget "$YOUTUBE_URL" --quiet -O main/YouTube.ipa
           cd main
           mv YouTube.ipa YouTube.zip
           unzip -q YouTube.zip
